@@ -7,6 +7,9 @@ find_package(benchmark REQUIRED)
 
 
 add_executable(algInto main.cpp insertSort.cpp
+        mergeSort.cpp
+        bubbleSort.cpp
+        utils/utils.cpp
 )
 
 target_link_libraries(algInto benchmark::benchmark)

@@ -10,5 +10,11 @@
 #include <vector>
 #include <benchmark/benchmark.h>
 
+#include "utils/utils.h"
+
 using namespace std;
+
+void insertSort(vector<int> &arr);
+void mergeSort(vector<int> &arr);
+void bubbleSort(vector<int> &arr);
 #endif //ALGINTO_WEHEAD_H

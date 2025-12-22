@@ -21,27 +21,3 @@ void insertSort(vector<int> &arr) {
     }
 }
 
-// 插入排序测试
-static void BM_insertSort(benchmark::State& state) {
-    for (auto _ : state) {
-        state.PauseTiming();
-        vector<int> arr;
-        for (int i = 0; i < state.range(0); i++) {
-            arr.push_back(i);
-        }
-        if (state.range(1)) {
-            ranges::shuffle(arr, std::mt19937(std::random_device()()));
-        }
-        state.ResumeTiming();
-
-        insertSort(arr);
-
-        state.PauseTiming();
-        assert(is_sorted(arr.begin(), arr.end()));
-        state.ResumeTiming();
-    }
-}
-BENCHMARK(BM_insertSort)->ArgsProduct( {
-    {100, 1000, 10000},
-    {false, true}
-})->Iterations(20);
