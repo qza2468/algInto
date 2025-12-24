@@ -9,6 +9,9 @@
 #include <random>
 #include <vector>
 #include <benchmark/benchmark.h>
+#include <eigen3/Eigen/Dense>
+#include <memory>
+#include <thread>
 
 #include "utils/utils.h"
 

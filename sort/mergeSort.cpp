@@ -2,7 +2,7 @@
 // Created by qza2468 on 2025/12/22.
 //
 
-#include "weHead.h"
+#include "../weHead.h"
 
 void mergeSortHelper(vector<int> &arr, int low, int high, vector<int> &left, vector<int> &right) {
     if (high - low < 2) return;

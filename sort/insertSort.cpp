@@ -1,7 +1,7 @@
 //
 // Created by qza2468 on 2025/12/22.
 //
-#include "weHead.h"
+#include "../weHead.h"
 
 void insertSort(vector<int> &arr) {
     if (arr.size() < 2) return ;

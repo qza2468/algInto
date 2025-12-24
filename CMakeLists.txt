@@ -5,11 +5,14 @@ set(CMAKE_CXX_STANDARD 20)
 
 find_package(benchmark REQUIRED)
 
+find_package(Eigen3 CONFIG REQUIRED)
 
-add_executable(algInto main.cpp insertSort.cpp
-        mergeSort.cpp
-        bubbleSort.cpp
+add_executable(algInto main.cpp sort/insertSort.cpp
+        sort/mergeSort.cpp
+        sort/bubbleSort.cpp
         utils/utils.cpp
+        matrix/multiply.cpp
 )
 
-target_link_libraries(algInto benchmark::benchmark)
+target_link_libraries(algInto PRIVATE benchmark::benchmark
+        PRIVATE Eigen3::Eigen)
