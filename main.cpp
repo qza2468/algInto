@@ -23,11 +23,13 @@ static void BM_Sort(benchmark::State& state) {
                 mergeSort(arr); break;
             case 2:
                 bubbleSort(arr); break;
+            case 3:
+                heapSort(arr); break;
             default: break;
         }
 
         state.PauseTiming();
-        assert(is_sorted(arr.begin(), arr.end()));
+        assert(is_sorted(arr.begin(), arr.end())); // 判断数组是否正确排序
         state.ResumeTiming();
     }
 }
@@ -79,6 +81,7 @@ static void BM_MatMultiply(benchmark::State& state) {
 
 }
 
+#define BENCHMARK_SORT
 #ifdef BENCHMARK_SORT
 // 参数一：运行次数
 // 参数二：排序方法
@@ -92,18 +95,23 @@ BENCHMARK(BM_Sort)->ArgsProduct( {
 BENCHMARK(BM_Sort)->ArgsProduct( {
     {100, 1000, 10000},
         {1},
-    {false, true}
+    {true}
 })->Iterations(20)->Name("归并排序")->ArgNames({"数量", "", "原数组无序"});
 
 BENCHMARK(BM_Sort)->ArgsProduct( {
     {100, 1000, 10000},
         {2},
-    {false, true}
+    {true}
 })->Iterations(20)->Name("冒泡排序")->ArgNames({"数量", "", "原数组无序"});
+
+BENCHMARK(BM_Sort)->ArgsProduct( {
+    {10, 100, 1000, 10000},
+        {3},
+    {true}
+})->Iterations(20)->Name("堆排序")->ArgNames({"数量", "", "原数组无序"});
 
 #endif
 
-#define BENCHMARK_MATRIX
 #ifdef BENCHMARK_MATRIX
 BENCHMARK(BM_MatMultiply)->ArgsProduct( {
     {10, 100, 500, 1000},

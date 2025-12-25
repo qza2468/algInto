@@ -12,6 +12,7 @@ add_executable(algInto main.cpp sort/insertSort.cpp
         sort/bubbleSort.cpp
         utils/utils.cpp
         matrix/multiply.cpp
+        sort/heapSort.cpp
 )
 
 target_link_libraries(algInto PRIVATE benchmark::benchmark

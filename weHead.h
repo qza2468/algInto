@@ -20,4 +20,5 @@ using namespace std;
 void insertSort(vector<int> &arr);
 void mergeSort(vector<int> &arr);
 void bubbleSort(vector<int> &arr);
+void heapSort(vector<int> &arr);
 #endif //ALGINTO_WEHEAD_H
