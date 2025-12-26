@@ -25,6 +25,8 @@ static void BM_Sort(benchmark::State& state) {
                 bubbleSort(arr); break;
             case 3:
                 heapSort(arr); break;
+            case 4:
+                quickSort(arr); break;
             default: break;
         }
 
@@ -110,6 +112,11 @@ BENCHMARK(BM_Sort)->ArgsProduct( {
     {true}
 })->Iterations(20)->Name("堆排序")->ArgNames({"数量", "", "原数组无序"});
 
+BENCHMARK(BM_Sort)->ArgsProduct( {
+    {10, 100, 1000, 10000},
+        {4},
+    {true}
+})->Iterations(20)->Name("快速排序")->ArgNames({"数量", "", "原数组无序"});
 #endif
 
 #ifdef BENCHMARK_MATRIX

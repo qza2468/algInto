@@ -12,6 +12,7 @@
 #include <eigen3/Eigen/Dense>
 #include <memory>
 #include <thread>
+#include <stack>
 
 #include "utils/utils.h"
 
@@ -21,4 +22,5 @@ void insertSort(vector<int> &arr);
 void mergeSort(vector<int> &arr);
 void bubbleSort(vector<int> &arr);
 void heapSort(vector<int> &arr);
+void quickSort(vector<int> &arr);
 #endif //ALGINTO_WEHEAD_H
