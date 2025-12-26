@@ -13,6 +13,7 @@
 #include <memory>
 #include <thread>
 #include <stack>
+#include <list>
 
 #include "utils/utils.h"
 

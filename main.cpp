@@ -1,7 +1,7 @@
 
 #include "weHead.h"
 
-#include "matrix/matrix.h"
+#include "dataStructure/matrix/matrix.h"
 
 // 排序算法测试
 static void BM_Sort(benchmark::State& state) {
@@ -83,7 +83,7 @@ static void BM_MatMultiply(benchmark::State& state) {
 
 }
 
-#define BENCHMARK_SORT
+#define BENCHMARK_MATRIX
 #ifdef BENCHMARK_SORT
 // 参数一：运行次数
 // 参数二：排序方法

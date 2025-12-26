@@ -4,7 +4,7 @@
 
 #ifndef ALGINTO_MATRIX_H
 #define ALGINTO_MATRIX_H
-#include "../weHead.h"
+#include "../../weHead.h"
 
 
 class MyMat {

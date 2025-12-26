@@ -2,7 +2,7 @@
 // Created by qza2468 on 2025/12/24.
 //
 
-#include "../weHead.h"
+#include "../../weHead.h"
 
 #include "matrix.h"
 
